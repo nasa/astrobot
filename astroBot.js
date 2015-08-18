@@ -233,7 +233,7 @@ function SendToChannelCB(url, title, description, date, channel, user, message)
 {
 	try
 	{
-		channel.postMessage( { "attachments": [ { "text": message + "\n" + title + "\n" + description, "image_url": url, "color": "#FFFFFF", "mrkdwn_in": ["text"]} ], "username": "AstroBot", "unfurl_links": false, "unfurl_media": true } );
+		channel.postMessage( { "attachments": [ { "text": message + "\n" + title + "\n" + description, "image_url": url, "color": "#FFFFFF", "mrkdwn_in": ["text"]} ], "username": "AstroBot", "icon_url": "http://i.imgur.com/1ovnJeD.png", "unfurl_links": false, "unfurl_media": true } );
 	}
 	catch(err)
 	{
