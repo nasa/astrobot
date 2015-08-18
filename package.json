@@ -1,0 +1,25 @@
+{
+  "name": "astrobot",
+  "version": "1.0.0",
+  "description": "Bot to query and display APOD images.",
+  "main": "astroBot.js",
+  "dependencies": {
+    "request": "^2.60.0",
+    "slack-client": "^1.4.1"
+  },
+  "engines": {
+    "node": "0.12.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+	"start": "node astroBot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "apod",
+    "bot",
+    "astro"
+  ],
+  "author": "William Baker",
+  "license": "MIT"
+}
