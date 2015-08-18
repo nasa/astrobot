@@ -33,7 +33,7 @@ slack.on('open', function () {
     }
 });
 
-// Commands to execute when a message is received 
+// Commands to execute when a message is received  
 slack.on('message', function(message) {
     var channel = slack.getChannelGroupOrDMByID(message.channel);
     var user = slack.getUserByID(message.user);
