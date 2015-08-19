@@ -5,7 +5,8 @@
   "main": "astroBot.js",
   "dependencies": {
     "request": "^2.60.0",
-    "slack-client": "^1.4.1"
+    "slack-client": "^1.4.1",
+	"express": "^4.13.x"
   },
   "engines": {
     "node": "0.12.x"
