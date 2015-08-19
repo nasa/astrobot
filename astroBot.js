@@ -1,6 +1,6 @@
 var Slack = require('slack-client');
 var request = require('request');
-var port = process.env.PORT || 8333;
+var express = require('express');
 
 // Unique token for the AstroBot
 var token = '***REMOVED***';
@@ -8,15 +8,12 @@ var token = '***REMOVED***';
 // Setup an instance of slack with the above token 
 var slack = new Slack(token, true, true);
 
+var app = express();
+var port = process.env.PORT || 3000;
 
-var port = 5000;
-
-http.createServer(function(req, res) {
- res.writeHead(200, {
-   'Content-Type': 'text/plain'
- });
- res.end('Simple SlackBot 42\n');
-}).listen(port);
+app.listen(port, function () {
+  console.log('Slack bot listening on port ' + port);
+});
 
 // Commands to execute when the bot is opened 
 slack.on('open', function () {
