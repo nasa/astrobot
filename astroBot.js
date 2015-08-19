@@ -9,7 +9,7 @@ var token = '***REMOVED***';
 var slack = new Slack(token, true, true);
 
 
-var port = environment.port || 5000;
+var port = 5000;
 
 http.createServer(function(req, res) {
  res.writeHead(200, {
