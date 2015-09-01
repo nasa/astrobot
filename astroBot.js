@@ -189,7 +189,6 @@ function ProcessArguements(arguement, channel, user, message)
 			
 			var randomDate = new Date();
 			randomDate = randomDate.setDate(randomDate.getDate() - randomInt);
-			console.log(randomDate);
 			loadNewImage(randomDate, channel, user, message);
 		}
 		// APOD Date
