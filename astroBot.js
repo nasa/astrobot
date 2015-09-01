@@ -1,6 +1,11 @@
 var Slack = require('slack-client');
 var request = require('request');
 var express = require('express');
+var http = require("http");
+
+setInterval(function() {
+    http.get("http://ancient-shore-4819.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
 
 // Unique token for the AstroBot
 var token = 'xoxb-8952060609-DKLOV3KXRS3aynsZG9WEhsPz';
