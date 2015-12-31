@@ -2,13 +2,14 @@ var Slack = require('slack-client');
 var request = require('request');
 var express = require('express');
 var http = require("http");
+var config = require("./config");
 
 setInterval(function() {
-    http.get("http://ancient-shore-4819.herokuapp.com");
-}, 300000); // every 5 minutes(300000)
+    http.get(config.heroku.url);
+}, (config.heroku.checkInterval * 60) * 1000 ); // every 5 minutes(300000)
 
 // Unique token for the AstroBot
-var token = 'xoxb-8952060609-DKLOV3KXRS3aynsZG9WEhsPz';
+var token = config.slack.token;
  
 // Setup an instance of slack with the above token 
 var slack = new Slack(token, true, true);
@@ -231,7 +232,7 @@ function loadNewImage(date, channel, user, message)
 	message += "\n APOD Image for " + formattedDate;
 
     request({
-        url: 'https://api.data.gov/nasa/planetary/apod?concept_tags=false&api_key=v0vtLtffGVJEGa7O86c467o3lZTjxk8dvFe0RlY9&date=' + formattedDate,
+        url: 'https://api.data.gov/nasa/planetary/apod?concept_tags=false&api_key=' + config.nasa.apiKey + '&date=' + formattedDate,
         json: true
     }, function (error, response, body) {
         if (!error && response.statusCode === 200) {
