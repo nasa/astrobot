@@ -1,1 +1,16 @@
-node_modules/
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules
+
+# Hide npm cache
+.npm
+
+# Hide REPL history used for testing
+.node_repl_history
+
+# Hide files with highly sensitive information
+config.json
