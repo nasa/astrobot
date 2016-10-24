@@ -4,13 +4,17 @@
         "url": "http://ancient-shore-4819.herokuapp.com",
         "checkInterval": 5
     },
-    
+
     "slack": {
         "token": "***REMOVED***"
     },
-    
+
     "nasa": {
         "apiKey": "v0vtLtffGVJEGa7O86c467o3lZTjxk8dvFe0RlY9"
+    },
+
+    "discord": {
+      "token": "TOKEN HERE"
     }
 
 }
