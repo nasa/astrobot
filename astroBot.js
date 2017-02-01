@@ -73,13 +73,9 @@ slack.on('message', function(message) {
 			switch(command.toUpperCase())
 			{
 				case 'apod'.toUpperCase():
+				case 'help'.toUpperCase():
 					ProcessOptions(option, arguement, channel, user)
 					break;
-				
-				case 'help'.toUpperCase():
-					ProcessOptions(option, arguement, channel, user);
-					break; 
-					
 				case 'hi'.toUpperCase():
 				case 'hey'.toUpperCase():
 				case 'hello'.toUpperCase():
