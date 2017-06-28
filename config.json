@@ -4,13 +4,17 @@
         "url": "url-goes-here",
         "checkInterval": 5
     },
-    
+
     "slack": {
         "token": "long-token-key-goes-here"
     },
-    
+
     "nasa": {
         "apiKey": "long-token-key-goes-here"
+    },
+
+    "discord": {
+      "token": "TOKEN HERE"
     }
 
 }
