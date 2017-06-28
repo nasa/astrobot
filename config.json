@@ -1,16 +1,16 @@
 {
 
     "heroku": {
-        "url": "http://ancient-shore-4819.herokuapp.com",
+        "url": "url-goes-here",
         "checkInterval": 5
     },
 
     "slack": {
-        "token": "***REMOVED***"
+        "token": "long-token-key-goes-here"
     },
 
     "nasa": {
-        "apiKey": "v0vtLtffGVJEGa7O86c467o3lZTjxk8dvFe0RlY9"
+        "apiKey": "long-token-key-goes-here"
     },
 
     "discord": {
