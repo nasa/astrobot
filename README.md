@@ -1,4 +1,4 @@
 # astrobot
-A slack bot integration with NASA data.
+A Slack/Discord bot integration with NASA data.
 
-This is a slack bot that is designed to use the NASA APOD API to allow users to query the API through slack. 
+This is a Slack/Discord bot that is designed to use the NASA APOD API to allow users to query the API through Slack or Discord. 
