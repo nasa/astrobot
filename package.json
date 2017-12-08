@@ -4,10 +4,11 @@
   "description": "Bot to query and display APOD images.",
   "main": "astroBot.js",
   "dependencies": {
-    "discord.js": "github:hydrabolt/discord.js#indev",
+    "discord.js": "^11.2.1",
     "express": "^4.13.x",
     "request": "^2.60.0",
     "slack-client": "^1.4.1",
+    "strip-indent": "^2.0.0",
     "superagent": "^2.3.0"
   },
   "engines": {
