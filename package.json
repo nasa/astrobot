@@ -9,7 +9,7 @@
     "request": "^2.60.0",
     "slack-client": "^1.4.1",
     "strip-indent": "^2.0.0",
-    "superagent": "^2.3.0"
+    "superagent": ">=3.7.0"
   },
   "engines": {
     "node": "0.12.x"
