@@ -36,13 +36,13 @@ Please read CONTRIBUTING.md <need to create one> for details on our code of cond
 ## Versioning
 We use SemVer for versioning. For the versions available, see the tags on this repository.
 
-##Authors
+## Authors
 <original authors>
 See also the list of contributors who participated in this project.
 
 ## License
-Copyright 2016-2017 United States Government as represented by the Administrator of the National Aeronautics and Space Administration. Licensed under the Apache License, Version 2.0 
-Please see the <a href="https://github.com/nasa/astrobot/blob/master/license.md">license.md</a> file.
+Copyright 2016-2017 United States Government as represented by the Administrator of the National Aeronautics and Space Administration. Licensed under the Apache License, Version 2.0. 
+Please see the <a href="https://github.com/nasa/astrobot/blob/master/license.md">license.md</a> license file.
 
 ## Acknowledgments
 Hat tip to anyone whose code was used => <text goes here>
