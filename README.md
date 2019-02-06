@@ -22,17 +22,16 @@ What things you need to install the software and how to install them
 We need tests! Please see contributing section below.
 
 
-
 ## Deployment
+Deployment will involve this code as well as getting or setting configuration or tokens from <a href="https://slack.com/">Slack</a> or <a href="https://discordapp.com/">Discord</a>, <a href="https://api.nasa.gov/">NASA API key</a>, and <a href="https://www.heroku.com/">Heroku</a>. 
 <text goes here>
-
 
 ## Built With
 <text goes here>
 
 ## Contributing
 <text goes here>
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us. That fact that the code is for both DISCORD and SLACK is a result of contributors outside of NASA who adapted the code to work with DISCORD. We welcome contributions!
+Please read CONTRIBUTING.md <need to create one> for details on our code of conduct, and the process for submitting pull requests to us. That fact that the code is for both DISCORD and SLACK is a result of contributors outside of NASA who adapted the code to work with DISCORD. We welcome contributions!
 
 ## Versioning
 We use SemVer for versioning. For the versions available, see the tags on this repository.
@@ -46,3 +45,6 @@ See also the list of contributors who participated in this project.
 
 ## Acknowledgments
 Hat tip to anyone whose code was used => <text goes here>
+
+## A Reminder on Security
+<b>DO NOT COMMIT CODE WITH YOUR TOKENS</b> in <a href="https://github.com/nasa/astrobot/blob/master/config.json">config.json</a>. Please use environment variables. 
