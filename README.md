@@ -41,7 +41,8 @@ We use SemVer for versioning. For the versions available, see the tags on this r
 See also the list of contributors who participated in this project.
 
 ## License
-<text goes here>
+Copyright 2016-2017 United States Government as represented by the Administrator of the National Aeronautics and Space Administration. Licensed under the Apache License, Version 2.0 
+Please see the <a href="https://github.com/nasa/astrobot/blob/master/license.md">license.md</a> file.
 
 ## Acknowledgments
 Hat tip to anyone whose code was used => <text goes here>
