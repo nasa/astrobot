@@ -7,9 +7,11 @@ This is a Slack/Discord bot that is designed to use the NASA APOD API to allow u
 <text goes here>
 	These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+
 ### Prerequisites
 What things you need to install the software and how to install them
 <text goes here>
+
 
 ### Give examples
 <text goes here>
@@ -17,7 +19,7 @@ What things you need to install the software and how to install them
 
 
 ## Running the tests
-<text goes here>
+We need tests! Please see contributing section below.
 
 
 
@@ -30,7 +32,7 @@ What things you need to install the software and how to install them
 
 ## Contributing
 <text goes here>
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us. That fact that the code is for both DISCORD and SLACK is a result of contributors outside of NASA who adapted the code to work with DISCORD. We welcome contributions!
 
 ## Versioning
 We use SemVer for versioning. For the versions available, see the tags on this repository.
