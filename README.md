@@ -6,18 +6,18 @@ This is a Slack/Discord bot that is designed to use the NASA APOD API to allow u
 <badges go here>
 	
 ## Table of Contents
-- GettingStarted [GettingStarted](#GettingStarted)
-- Install [Install](#Install)
-- Usage [Usage](#Usage)
-- Test [Test](#Test)
-- Deployment [Deployment](#Deployment)
-- BuiltWith [BuiltWith](#BuiltWith)
-- Contributing [Contributing](#Contributing)
-- Versioning [Versioning](#Versioning)
-- ProjectStatus [ProjectStatus](#ProjectStatus)
-- Authors [Authors](#Authors)
-- License [License](#License)
--  [Acknowledgments](#Acknowledgments)
+- [GettingStarted](#GettingStarted)
+- [Install](#Install)
+- [Usage](#Usage)
+- [Test](#Test)
+- [Deployment](#Deployment)
+- [BuiltWith](#BuiltWith)
+- [Contributing](#Contributing)
+- [Versioning](#Versioning)
+- [ProjectStatus](#ProjectStatus)
+- [Authors](#Authors)
+- [License](#License)
+- [Acknowledgments](#Acknowledgments)
 
 ## GettingStarted
 <text goes here>
