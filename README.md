@@ -17,7 +17,7 @@ This is a Slack/Discord bot that is designed to use the NASA APOD API to allow u
 - Roadmap & Project Status
 - Authors
 - License
--  [Acknowledgments](##Acknowledgments)
+-  [Acknowledgments](#Acknowledgments)
 
 ## Getting Started
 <text goes here>
