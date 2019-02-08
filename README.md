@@ -16,7 +16,7 @@ This is a Slack/Discord bot that is designed to use the NASA APOD API to allow u
 - Versioning [Versioning](#Versioning)
 - ProjectStatus [ProjectStatus](#ProjectStatus)
 - Authors [Authors](#Authors)
-- Authors [Authors](#Authors)
+- License [License](#License)
 -  [Acknowledgments](#Acknowledgments)
 
 ## GettingStarted
