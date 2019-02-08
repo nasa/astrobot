@@ -6,25 +6,25 @@ This is a Slack/Discord bot that is designed to use the NASA APOD API to allow u
 <badges go here>
 	
 ## Table of Contents
-- Getting Started [Acknowledgments](#Acknowledgments)
-- Prerequisites & Install [Acknowledgments](#Acknowledgments)
-- Usage [Acknowledgments](#Acknowledgments)
-- Running the tests [Acknowledgments](#Acknowledgments)
-- Deployment [Acknowledgments](#Acknowledgments)
-- Built With [Acknowledgments](#Acknowledgments)
-- Contributing [Acknowledgments](#Acknowledgments)
-- Versioning [Acknowledgments](#Acknowledgments)
-- Roadmap & Project Status [Roadmap & Project Status](#Roadmap & Project Status)
-- Authors [Acknowledgments](#Acknowledgments)
-- License [Acknowledgments](#Acknowledgments)
+- GettingStarted [GettingStarted](#GettingStarted)
+- Install [Install](#Install)
+- Usage [Usage](#Usage)
+- Test [Test](#Test)
+- Deployment [Deployment](#Deployment)
+- BuiltWith [BuiltWith](#BuiltWith)
+- Contributing [Contributing](#Contributing)
+- Versioning [Versioning](#Versioning)
+- ProjectStatus [ProjectStatus](#ProjectStatus)
+- Authors [Authors](#Authors)
+- Authors [Authors](#Authors)
 -  [Acknowledgments](#Acknowledgments)
 
-## Getting Started
+## GettingStarted
 <text goes here>
 	These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 
-### Prerequisites & Install
+### Install
 What things you need to install the software and how to install them
 <text goes here>
 
@@ -41,7 +41,7 @@ We need tests! Please see contributing section below.
 Deployment will involve this code as well as getting or setting configuration or tokens from <a href="https://slack.com/">Slack</a> or <a href="https://discordapp.com/">Discord</a>, <a href="https://api.nasa.gov/">NASA API key</a>, and <a href="https://www.heroku.com/">Heroku</a>. 
 <text goes here>
 
-## Built With
+## BuiltWith
 <text goes here>
 
 ## Contributing
@@ -51,7 +51,7 @@ Please read CONTRIBUTING.md <need to create one> for details on our code of cond
 ## Versioning
 We use SemVer for versioning. For the versions available, see the tags on this repository.
 
-## Roadmap and Project Status
+## ProjectStatus
 
 ## Authors
 <original authors>
