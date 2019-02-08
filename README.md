@@ -3,17 +3,32 @@ A Slack/Discord bot integration with NASA data.
 
 This is a Slack/Discord bot that is designed to use the NASA APOD API to allow users to query the API through Slack or Discord. 
 
+<badges go here>
+	
+## Table of Contents
+- Getting Started
+- Prerequisites & Install
+- Usage 
+- Running the tests
+- Deployment
+- Built With
+- Contributing
+- Versioning
+- Roadmap & Project Status
+- Authors
+- License
+- Acknowledgments
+
 ## Getting Started
 <text goes here>
 	These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 
-### Prerequisites
+### Prerequisites & Install
 What things you need to install the software and how to install them
 <text goes here>
 
-
-### Give examples
+### Usage 
 <text goes here>
 
 
@@ -35,6 +50,8 @@ Please read CONTRIBUTING.md <need to create one> for details on our code of cond
 
 ## Versioning
 We use SemVer for versioning. For the versions available, see the tags on this repository.
+
+## Roadmap and Project Status
 
 ## Authors
 <original authors>
