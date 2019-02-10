@@ -6,14 +6,14 @@ const stripIndent = require('strip-indent');
 const NASA = new Discord.Client();
 
 NASA.on('ready', () => {
-	console.log('Logged into Discord as ' + NASA.user.username);
-	console.log('You are in '+ NASA.guilds.size + ` guild${NASA.guilds.size == 1? '' : 's'}!`);
-	NASA.prefix = new RegExp('^<@!?' + NASA.user.id + '>');
+	console.log(`Logged into Discord as ${NASA.user.username}`);
+	console.log(`You are in ${NASA.guilds.size}${` guild${NASA.guilds.size == 1? '' : 's'}!`}`);
+	NASA.prefix = new RegExp(`^<@!?${NASA.user.id}>`);
 });
 
 const commands = {
 	'help': (message) => sendHelp(message),
-	'apod': (message, argument, dm) => {
+	'apod': ({channel, author}, argument, dm) => {
 		let date;
 		switch (argument) {
 		case 'random':
@@ -30,17 +30,17 @@ const commands = {
 		default:
 			date = argument == undefined ? new Date() : new Date(argument);
 			if (date == 'Invalid Date') {
-				return message.channel.send('That date was invalid, try something like `Janary 30, 1995`, or `1995-1-30`');
+				return channel.send('That date was invalid, try something like `Janary 30, 1995`, or `1995-1-30`');
 			}
 			break;
 		}
-		getAPODImage(date).then((data) => {
+		getAPODImage(date).then(({url}) => {
 			if (!dm) {
-				message.channel.startTyping();
-				message.channel.send('', new Discord.Attachment(data.url, 'APOD.jpg')).then(() => message.channel.stopTyping());
+				channel.startTyping();
+				channel.send('', new Discord.Attachment(url, 'APOD.jpg')).then(() => channel.stopTyping());
 			}
 			if (dm) {
-				message.author.send('', new Discord.Attachment(data.url, 'APOD.jpg'));
+				author.send('', new Discord.Attachment(url, 'APOD.jpg'));
 			}
 		});
 	},
@@ -74,11 +74,10 @@ NASA.on('message', (message) => {
 	}
 });
 
-function sendHelp(message) {
-	if (message.channel.channel.type != 'dm') message.channel.send('Sending you a DM...').then((message) => message.delete(3000));
-	message.author.send(stripIndent(`
+function sendHelp({channel, author}) {
+	if (channel.channel.type != 'dm') channel.send('Sending you a DM...').then((message) => message.delete(3000));
+	author.send(stripIndent(`
 	Here's some information on how I can be used.
-
 	apod: Display an Astronomy Picture of the Day image.
 	usage: \`<@${NASA.user.id}> apod {option}\`
 	**Options:**
@@ -94,9 +93,9 @@ function getAPODImage(date) {
 	return new Promise((resolve, reject) => {
 		date = formatDate(date);
 		superagent.get(`https://api.nasa.gov/planetary/apod?concept_tags=false&api_key=${config.nasa.apiKey}&date=${date}`)
-			.end((err, res) => {
+			.end((err, {body}) => {
 				if (err) return reject(err);
-				return resolve(res.body);
+				return resolve(body);
 			});
 	});
 }
@@ -104,11 +103,11 @@ function getAPODImage(date) {
 
 function formatDate(date) {
 	let d = new Date(date);
-	let month = '' + (d.getMonth() + 1);
-	let day = '' + d.getDate();
+	let month = `${d.getMonth() + 1}`;
+	let day = `${d.getDate()}`;
 	let year = d.getFullYear();
-	if (month.length < 2) month = '0' + month;
-	if (day.length < 2) day = '0' + day;
+	if (month.length < 2) month = `0${month}`;
+	if (day.length < 2) day = `0${day}`;
 	return [year, month, day].join('-');
 }
 
