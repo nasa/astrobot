@@ -1,0 +1,21 @@
+# Contributing
+
+Thanks for considering contributing and making our planet easier to explore!
+
+We're excited you would like to contribute to Astrobot! Whether you're finding bugs, adding new features, fixing anything broken, or improving documentation, get started by submitting an issue or pull request!
+
+## Submitting an Issue
+
+If you have any questions or ideas, or notice any problems or bugs, first [search open issues](https://github.com/nasa/astrobot/issues) to see if the issue has already been submitted. We may already be working on the issue. If you think your issue is new, you're welcome to [create a new issue](https://github.com/nasa/astrobot/issues/new).
+
+## Pull Requests
+
+If you want to submit your own contributions, follow these steps:
+
+* Fork the astrobot repo
+* Create a new branch from the branch you'd like to contribute to
+* If an issue does't already exist, submit one (see above)
+* [Create a pull request](https://help.github.com/articles/creating-a-pull-request/) from your fork into the target branch of the nasa/astrobot repo
+* Be sure to [mention the corresponding issue number](https://help.github.com/articles/closing-issues-using-keywords/) in the PR description, i.e. "Fixes Issue #10"
+* Upon submission of a pull request, the Astrobot development team will review the code
+* The request will then either be merged, declined, or an adjustment to the code will be requested
