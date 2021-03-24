@@ -2,9 +2,14 @@ var Slack = require('slack-client');
 var request = require('request');
 var express = require('express');
 var http = require('http');
+var https = require('https');
 var config = require('./config');
 setInterval(function () {
-  http.get(config.heroku.url);
+  if (config.heroku.url.substring(0, 5) == 'https') {
+    https.get(config.heroku.url);
+  } else {
+    http.get(config.heroku.url);
+  }
 }, (config.heroku.checkInterval * 60) * 1000); // every 5 minutes(300000)
 
 // Unique token for the AstroBot
