@@ -5,7 +5,7 @@ var http = require('http');
 var https = require('https');
 var config = require('./config');
 setInterval(function () {
-  if (config.heroku.url.substring(0, 5) == 'https') {
+  if (config.heroku.url.substring(0, 5) === 'https') {
     https.get(config.heroku.url);
   } else {
     http.get(config.heroku.url);
