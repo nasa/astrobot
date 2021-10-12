@@ -75,7 +75,7 @@ NASA.on('message', (message) => {
 });
 
 function sendHelp(message) {
-  if (message.channel.channel.type != 'dm') message.channel.send('Sending you a DM...').then((message) => message.delete(3000));
+  if (message.channel.type != 'dm') message.channel.send('Sending you a DM...').then((message) => message.delete(3000));
   message.author.send(stripIndent(`
 	Here's some information on how I can be used.
 
