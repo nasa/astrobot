@@ -30,7 +30,7 @@ const commands = {
       default:
         date = argument == undefined ? new Date() : new Date(argument);
         if (date == 'Invalid Date') {
-          return message.channel.send('That date was invalid, try something like `Janary 30, 1995`, or `1995-1-30`');
+          return message.channel.send('That date was invalid, try something like `January 30, 1995`, or `1995-1-30`');
         }
         break;
     }
