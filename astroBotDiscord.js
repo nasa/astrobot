@@ -44,6 +44,16 @@ const commands = {
       }
     });
   },
+  'search': (message, argument) => {
+    if (!argument) return message.channel.send('You need to include a search term.');
+
+    getNASAImageSearch(argument).then(data => {   
+        message.channel.send(data.imageUrl);
+        message.channel.send(`**${data.title}**\n${data.description}`);
+    }).catch(err => {
+        message.channel.send(err.message);
+    });
+  }
 };
 
 NASA.on('message', (message) => {
@@ -52,12 +62,10 @@ NASA.on('message', (message) => {
   // [0]: Command, [1] Argument
   message.content = message.content.replace(/[ ]{2,}/, ' ');
   const dm = message.content.includes('-dm');
-  const split = message.content.split(' ');
+  const split = message.content.split(' ')
   if (dm) split.splice(split.length - 1, 1);
   const command = split[1];
-  let argument;
-  if (split.length == 3) argument = split[2];
-  if (split.length > 3) argument = `${split[2]} ${parseInt(split[3].replace(/[a-z]/gi, ''))-1} ${split[4]}`;
+  let argument = split.slice(2).join(' ');
 
   if (!command) return;
   switch (command.toLowerCase()) {
@@ -87,6 +95,13 @@ function sendHelp(message) {
 	today:  display today's APOD image.
 	yesterday: display yesterday's APOD image.
 	{date} displays a specific date's APOD image with {date} in the format: YYYY-MM-DD (Ex: 2016-10-24)
+
+  Search: Nasa Random Image Search.
+  Supply topic and optional keywords to narrow down search results.
+  **Options:**
+  Search <topic> <keyword> <etc...>:
+  Randomly displays a NASA image, title, and description based on search parameters.
+  Example - "search mars curiosity rover"
 	`));
 }
 
@@ -101,6 +116,31 @@ function getAPODImage(date) {
   });
 }
 
+function getNASAImageSearch(argument) {
+  return new Promise((resolve, reject) => {
+    const keywords = argument.split(' ').join(',');
+    superagent.get(`https://images-api.nasa.gov/search?q=${argument}&media_type=image&keywords=${keywords}`)
+    .then(res => {
+      const items = res.body.collection.items;
+      if (items.length > 0) {
+        const randomIndex = Math.floor(Math.random() * items.length);
+        const item = items[randomIndex];
+        const imageUrl = item.links && item.links.length > 0 ? item.links[0].href : null;
+        const title = item.data && item.data.length > 0 ? item.data[0].title : "No title available.";
+        const description = item.data && item.data.length > 0 ? item.data[0].description : "No description available.";
+
+        if (imageUrl) {
+          resolve({ imageUrl, title, description }); 
+        }
+      } else {
+        reject(new Error('No images found. Be sure keywords are separated by spaces.'));
+      }
+    })
+    .catch(err => {
+      reject(err);
+    });
+  });
+}
 
 function formatDate(date) {
   let d = new Date(date);
