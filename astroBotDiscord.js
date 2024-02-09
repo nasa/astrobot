@@ -62,7 +62,7 @@ NASA.on('message', (message) => {
   // [0]: Command, [1] Argument
   message.content = message.content.replace(/[ ]{2,}/, ' ');
   const dm = message.content.includes('-dm');
-  const split = message.content.split(' ')
+  const split = message.content.split(' ');
   if (dm) split.splice(split.length - 1, 1);
   const command = split[1];
   let argument = split.slice(2).join(' ');
